@@ -6,7 +6,7 @@
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 18:46:48 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/06/12 01:46:17 by aezzeddi         ###   ########.fr       */
+/*   Updated: 2017/06/14 00:11:41 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,12 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *n);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+int					ft_islower(int c);
+int					ft_isupper(int c);
+int					ft_strcount(char *s, char c);
+int					ft_max(int *arr, int n);
+int					ft_min(int *arr, int n);
+void				ft_sort_int_array(int *arr, int n);
 
 #endif

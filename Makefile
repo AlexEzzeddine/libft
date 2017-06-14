@@ -58,7 +58,13 @@ FILES		= ft_memset.c \
 				ft_lstdel.c \
 				ft_lstadd.c \
 				ft_lstiter.c \
-				ft_lstmap.c
+				ft_lstmap.c \
+				ft_islower.c \
+				ft_isupper.c \
+				ft_max.c \
+				ft_min.c \
+				ft_sort_int_array.c \
+				ft_strcount.c
 
 OBJ			= $(FILES:%.c=%.o)
 
