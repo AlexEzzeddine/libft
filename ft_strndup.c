@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrealloc.c                                    :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/24 21:32:44 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/06/24 21:45:43 by aezzeddi         ###   ########.fr       */
+/*   Created: 2017/06/24 21:44:24 by aezzeddi          #+#    #+#             */
+/*   Updated: 2017/06/24 21:45:04 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strrealloc(char *old_buf, size_t size)
+char	*ft_strndup(const char *src, size_t n)
 {
-	char *new_buf;
+	char	*dup;
+	int		i;
 
-	if (!old_buf)
-	{
-		new_buf = ft_strnew(size);
-		return (new_buf);
-	}
-	new_buf = ft_strnew(ft_strlen(old_buf) + size);
-	ft_strcpy(new_buf, old_buf);
-	ft_strdel(&old_buf);
-	return (new_buf);
+	dup = ft_strnew(n);
+	if (!dup)
+		return (NULL);
+	ft_strncpy(dup, src);
+	return (dup);
 }
