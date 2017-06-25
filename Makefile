@@ -1,6 +1,10 @@
 
 NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -I. -c
+
+SRC_DIR		= srcs/
+INC_DIR		= includes/
+
+CFLAGS		= -Wall -Werror -Wextra
 FILES		= ft_memset.c \
 				ft_bzero.c \
 				ft_memcpy.c \
@@ -68,6 +72,7 @@ FILES		= ft_memset.c \
 				ft_strrealloc.c \
 				ft_strndup.c
 
+SRCS		= $(patsubst %,$(SRC_DIR)%,$(FILES))
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
@@ -75,8 +80,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-$(OBJ): $(FILES)
-	gcc $(CFLAGS) $(FILES)
+$(OBJ): $(SRCS)
+	gcc -c -I$(INC_DIR) $(CFLAGS) $(SRCS)
 
 clean:
 	rm -f $(OBJ)
