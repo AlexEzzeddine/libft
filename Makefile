@@ -64,7 +64,8 @@ FILES		= ft_memset.c \
 				ft_max.c \
 				ft_min.c \
 				ft_sort_int_array.c \
-				ft_strcount.c
+				ft_strcount.c \
+				ft_strrealloc.c
 
 OBJ			= $(FILES:%.c=%.o)
 

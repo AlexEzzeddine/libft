@@ -6,7 +6,7 @@
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 18:46:48 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/06/14 00:11:41 by aezzeddi         ###   ########.fr       */
+/*   Updated: 2017/06/24 21:35:07 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ int					ft_strcount(char *s, char c);
 int					ft_max(int *arr, int n);
 int					ft_min(int *arr, int n);
 void				ft_sort_int_array(int *arr, int n);
+char				*ft_strrealloc(char *old_buf, size_t size);
 
 #endif
