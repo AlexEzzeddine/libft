@@ -70,7 +70,8 @@ FILES		= ft_memset.c \
 				ft_sort_int_array.c \
 				ft_strcount.c \
 				ft_strrealloc.c \
-				ft_strndup.c
+				ft_strndup.c \
+				ft_lstpush.c
 
 SRCS		= $(patsubst %,$(SRC_DIR)%,$(FILES))
 OBJ			= $(FILES:%.c=%.o)
