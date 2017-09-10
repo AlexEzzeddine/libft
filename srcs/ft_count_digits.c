@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_count_digits.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 19:00:09 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/09/09 22:47:57 by aezzeddi         ###   ########.fr       */
+/*   Created: 2017/09/07 22:32:17 by aezzeddi          #+#    #+#             */
+/*   Updated: 2017/09/09 22:47:02 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int	ft_count_digits(int n)
 {
-	char	*dup;
-	int		i;
+	int i;
 
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	dup = (char*)malloc(sizeof(*dup) * (i + 1));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (src[i] != '\0')
+	i = 1;
+	while (n > 9)
 	{
-		dup[i] = src[i];
+		n /= 10;
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (i);
 }

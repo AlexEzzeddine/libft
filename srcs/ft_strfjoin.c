@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strfjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 19:00:09 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/09/09 22:47:57 by aezzeddi         ###   ########.fr       */
+/*   Created: 2017/09/05 18:52:56 by aezzeddi          #+#    #+#             */
+/*   Updated: 2017/09/09 22:46:53 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strfjoin(char *s1, char *s2)
 {
-	char	*dup;
-	int		i;
+	char *new_str;
 
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	dup = (char*)malloc(sizeof(*dup) * (i + 1));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dup[i] = src[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+	new_str = ft_strjoin(s1, s2);
+	if (s1)
+		free(s1);
+	return (new_str);
 }

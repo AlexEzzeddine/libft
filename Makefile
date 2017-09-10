@@ -46,6 +46,7 @@ FILES		= ft_memset.c \
 				ft_strnequ.c \
 				ft_strsub.c \
 				ft_strjoin.c \
+				ft_strfjoin.c \
 				ft_strtrim.c \
 				ft_strsplit.c \
 				ft_itoa.c \
@@ -69,10 +70,12 @@ FILES		= ft_memset.c \
 				ft_min.c \
 				ft_sort_int_array.c \
 				ft_strcount.c \
+				ft_count_digits.c \
 				ft_strrealloc.c \
 				ft_strndup.c \
 				ft_lstpush.c \
-				ft_lstlen.c
+				ft_lstlen.c \
+				ft_sorted_list_insert.c
 
 SRCS		= $(patsubst %,$(SRC_DIR)%,$(FILES))
 OBJ			= $(FILES:%.c=%.o)

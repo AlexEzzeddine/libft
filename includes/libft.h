@@ -6,7 +6,7 @@
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 18:46:48 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/06/30 11:03:51 by aezzeddi         ###   ########.fr       */
+/*   Updated: 2017/09/09 22:46:31 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strfjoin(char *s1, char *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 size_t				ft_strlen(const char *str);
@@ -95,10 +96,16 @@ int					ft_lstlen(t_list *list);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_strcount(char *s, char c);
+int					ft_count_digits(int n);
 int					ft_max(int *arr, int n);
 int					ft_min(int *arr, int n);
 void				ft_sort_int_array(int *arr, int n);
 char				*ft_strrealloc(char *old_buf, size_t size);
 char				*ft_strndup(const char *src, size_t n);
+void				ft_sorted_list_insert(t_list **begin_list,
+	t_list *new, int (*cmp)());
+
+# define MAX(a,b) (a>b?a:b)
+# define ABS(x) ((x) < 0 ? -(x) : (x))
 
 #endif

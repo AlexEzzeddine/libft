@@ -6,11 +6,11 @@
 /*   By: aezzeddi <aezzeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/24 21:32:44 by aezzeddi          #+#    #+#             */
-/*   Updated: 2017/06/24 21:45:43 by aezzeddi         ###   ########.fr       */
+/*   Updated: 2017/09/08 01:36:58 by aezzeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrealloc(char *old_buf, size_t size)
 {
